@@ -35,7 +35,6 @@ class LanguageModel:
         self.counts = counts
         self.dictionary = {word for doc in docs for word in doc.split()}
         self.n = n
-        pass
     
     def perplexity(self, text, alpha=1e-3):
         """
@@ -72,7 +71,6 @@ class LanguageModel:
             
         perp = np.exp(-1.0/(N-self.n+1) *(sum(wordLogProbs)))
         return perp
-        pass
         
     def sample(self, k):
         """
